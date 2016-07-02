@@ -108,18 +108,13 @@ class OriginalEnglish extends BaseLocale implements ILocale {
         
     public function generateName(seed : Int) : String {
         var buf = new StringBuf();
-        var i = SeedChanceBias(0, _name_original_english_1.length, seed, 50);
-        if (i >= 0) {
-            buf.add(_name_original_english_1[i]);
-        }
-        buf.add(_name_original_english_2[SeedChance(4, _name_original_english_2.length, seed)]);
-        buf.add(_name_original_english_3[SeedChance(7, _name_original_english_3.length, seed)]);
-        buf.add(_name_original_english_4[SeedChance(10, _name_original_english_4.length, seed)]);
-        buf.add(_name_original_english_5[SeedChance(13, _name_original_english_5.length, seed)]);
-        i = SeedChanceBias(15, _name_original_english_6.length, seed, 60);
-        if (i >= 0) {
-            buf.add(_name_original_english_6[i]);
-        }
+        appendBias(buf, _name_original_english_1, 0, seed, 50);
+        append(buf, _name_original_english_2, 4, seed);
+        append(buf, _name_original_english_3, 7, seed);
+        append(buf, _name_original_english_4, 10, seed);
+        append(buf, _name_original_english_5, 13, seed);
+        appendBias(buf, _name_original_english_6, 15, seed, 60);
+        
         var name = buf.toString();
         if (name.lastIndexOf('C', 0) == 0 && (name.lastIndexOf('e', 1) == 1 || name.lastIndexOf('i', 1) == 1)) {
             name = 'K' + name.substr(1);

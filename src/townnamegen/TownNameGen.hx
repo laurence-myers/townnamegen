@@ -1,21 +1,26 @@
 package townnamegen;
 import de.polygonal.core.math.random.Mersenne;
+import townnamegen.locales.AdditionalEnglish;
 import townnamegen.locales.ILocale;
 import townnamegen.locales.OriginalEnglish;
 
 @:expose
 class TownNameGen {
 
-    static var LOCALE_MAP = [
-        "OriginalEnglish" => new OriginalEnglish()
+    static var LOCALE_MAP : Map<String, ILocale> = [
+        "OriginalEnglish" => new OriginalEnglish(),
+        "AdditionalEnglish" => new AdditionalEnglish()
     ];
     
     private function new() {
         
     }
     
+    public static function addLocale(localeKey : String, locale : ILocale) {
+        LOCALE_MAP[localeKey] = locale;
+    }
+    
     public static function generate(localeKey : String, num : Int, ?seed : Int) : Array<String> {
-        trace(Type.getClassName(OriginalEnglish));
         var locale : ILocale = LOCALE_MAP.get(localeKey);
         if (locale == null) {
             throw 'Locale not found: $locale';

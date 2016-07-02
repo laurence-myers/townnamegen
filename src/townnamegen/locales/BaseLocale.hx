@@ -54,4 +54,15 @@ class BaseLocale {
     private static inline function GB(x : Int, s : Int /* uint8 */, n : Int /* uint8 */) {
         return (x >> s) & ((1 << n) - 1);
     }
+    
+    private inline function append(buf : StringBuf, table : Array<String>, chance : Int, seed : Int) {
+        buf.add(table[SeedChance(chance, table.length, seed)]);
+    }
+    
+    private inline function appendBias(buf : StringBuf, table : Array<String>, chance : Int, seed : Int, bias : Int) {
+        var i = SeedChanceBias(chance, table.length, seed, bias);
+        if (i >= 0) {
+            buf.add(table[i]);
+        }
+    }
 }
