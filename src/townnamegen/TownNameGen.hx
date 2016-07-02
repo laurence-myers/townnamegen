@@ -1,6 +1,7 @@
 package townnamegen;
 import de.polygonal.core.math.random.Mersenne;
 import townnamegen.locales.AdditionalEnglish;
+import townnamegen.locales.Austrian;
 import townnamegen.locales.ILocale;
 import townnamegen.locales.OriginalEnglish;
 
@@ -9,7 +10,8 @@ class TownNameGen {
 
     static var LOCALE_MAP : Map<String, ILocale> = [
         "OriginalEnglish" => new OriginalEnglish(),
-        "AdditionalEnglish" => new AdditionalEnglish()
+        "AdditionalEnglish" => new AdditionalEnglish(),
+        "Austrian" => new Austrian()
     ];
     
     private function new() {
