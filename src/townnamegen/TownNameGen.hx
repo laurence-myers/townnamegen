@@ -1,4 +1,5 @@
 package townnamegen;
+import de.polygonal.core.math.random.Mersenne;
 import townnamegen.locales.ILocale;
 import townnamegen.locales.OriginalEnglish;
 
@@ -22,11 +23,11 @@ class TownNameGen {
         if (seed == null) {
             seed = Std.random(2147483647);
         }
-        Randomizer.SetRandomSeed(seed);
+        var randomizer = new Mersenne(seed);
         var names = [];
         for (i in 0...num) {
-            names.push(locale.generateName(seed));
-            seed = Randomizer.Random();
+            var newSeed = Math.floor(randomizer.random());
+            names.push(locale.generateName(newSeed));
         }
         return names;
     }
