@@ -24,12 +24,25 @@ class TownNameGen {
             seed = Std.random(2147483647);
         }
         var randomizer = new Mersenne(seed);
-        var names = [];
+        var names : Map<String, Bool> = new Map<String, Bool>();
         for (i in 0...num) {
             var newSeed = Math.floor(randomizer.random());
-            names.push(locale.generateName(newSeed));
+            var name = locale.generateName(newSeed);
+            var j = 1000;
+            while (names.get(name) && j > 0) {
+                trace('Discarding $name');
+                newSeed = Math.floor(randomizer.random());
+                name = locale.generateName(newSeed);
+                j--;
+            }
+            if (j == 0) {
+                trace("Too many names, can't generate any more unique ones!");
+                break;
+            } else {
+                names[name] = true;
+            }
         }
-        return names;
+        return [for (k in names.keys()) k];
     }
     
     public static function test() {
