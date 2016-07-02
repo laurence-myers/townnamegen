@@ -8,11 +8,14 @@ import townnamegen.locales.OriginalEnglish;
 @:expose
 class TownNameGen {
 
-    static var LOCALE_MAP : Map<String, ILocale> = [
-        "OriginalEnglish" => new OriginalEnglish(),
-        "AdditionalEnglish" => new AdditionalEnglish(),
-        "Austrian" => new Austrian()
-    ];
+    static var LOCALE_MAP : Map<String, ILocale> = {
+        var map = new Map<String, ILocale>();
+        for (clz in CompileTime.getAllClasses(ILocale)) {
+            var instance = Type.createInstance(clz, []);
+            map.set(instance.getLocaleKey(), instance);
+        }
+        map;
+    };
     
     private function new() {
         

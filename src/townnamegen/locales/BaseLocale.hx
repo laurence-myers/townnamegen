@@ -65,4 +65,11 @@ class BaseLocale {
             buf.add(table[i]);
         }
     }
+    
+    public function getLocaleKey() : String {
+        var clz = Type.getClass(this);
+        var clzName = Type.getClassName(clz);
+        var clzNameSplit = clzName.split('.');
+        return clzNameSplit[clzNameSplit.length - 1];
+    }
 }
