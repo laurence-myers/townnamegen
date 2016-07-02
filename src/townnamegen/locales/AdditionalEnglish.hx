@@ -6,7 +6,7 @@ using StringTools;
  * @author Laurence Dougal Myers
  */
 class AdditionalEnglish extends BaseLocale implements ILocale {
-    private var _name_additional_english_prefix = [
+    private static var _name_additional_english_prefix = [
         "Great ",
         "Little ",
         "New ",
@@ -15,7 +15,7 @@ class AdditionalEnglish extends BaseLocale implements ILocale {
         "Old ",
     ];
 
-    private var _name_additional_english_1a = [
+    private static var _name_additional_english_1a = [
         "Pen",
         "Lough",
         "Stam",
@@ -61,7 +61,7 @@ class AdditionalEnglish extends BaseLocale implements ILocale {
         "Stan",
     ];
 
-    private var _name_additional_english_1b1 = [
+    private static var _name_additional_english_1b1 = [
         "Wr",
         "B",
         "C",
@@ -90,7 +90,7 @@ class AdditionalEnglish extends BaseLocale implements ILocale {
         "W",
     ];
 
-    private var _name_additional_english_1b2 = [
+    private static var _name_additional_english_1b2 = [
         "ar",
         "a",
         "e",
@@ -105,7 +105,7 @@ class AdditionalEnglish extends BaseLocale implements ILocale {
         "en",
     ];
 
-    private var _name_additional_english_1b3a = [
+    private static var _name_additional_english_1b3a = [
         "n",
         "d",
         "",
@@ -114,13 +114,13 @@ class AdditionalEnglish extends BaseLocale implements ILocale {
         "",
     ];
 
-    private var _name_additional_english_1b3b = [
+    private static var _name_additional_english_1b3b = [
         "ning",
         "ding",
         "fing",
     ];
 
-    private var _name_additional_english_2 = [
+    private static var _name_additional_english_2 = [
         "ville",
         "ham",
         "field",
@@ -178,7 +178,7 @@ class AdditionalEnglish extends BaseLocale implements ILocale {
         "thwaite",
     ];
 
-    private var _name_additional_english_3 = [
+    private static var _name_additional_english_3 = [
         "-on-sea",
         " Bay",
         " Market",
@@ -236,8 +236,7 @@ class AdditionalEnglish extends BaseLocale implements ILocale {
         name = name.replace("Frar", "Shor");
         name = name.replace("Grar", "Aber");
         name = name.replace("Brar", "Over");
-        name = name.replace("Wrar", "Inve"); // or "Stan"
+        name = name.replace("Wrar", "Stan");
         return name;
     }
-    
 }
