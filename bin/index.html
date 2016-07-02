@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<title>townnamegen</title>
+	<meta name="description" content="" />
+</head>
+<body>
+	
+	<script src="townnamegen.js"></script>
+    <div>
+        <form onsubmit="generateNames(event)">
+            <div>
+                <label for="localeKey">Name locale</label>
+                <select id="localeKey">
+                    <option value="OriginalEnglish">Original English</option>
+                </select>
+            </div>
+            <div>
+                <label for="numberToGenerate">Number of names to generate</label>
+                <input id="numberToGenerate" type="number" min="1" value="1"></input>
+            </div>
+            <div></div>
+                <label for="seed">Seed (leave blank for random)</label>
+                <input id="seed" type="number"></input>
+            </div>
+            <div>
+                <button type="submit">Generate</button>
+            </div>
+        </form>
+    </div>
+    <div>
+        <textarea id="output" rows="10"></textarea>
+    </div>
+    
+    <script type="text/javascript">
+        function getValue(id) {
+            return document.getElementById(id).value;
+        }
+    
+        function generateNames(event) {
+            event.preventDefault();
+            var localeKey = getValue("localeKey");
+            var numberToGenerate = getValue("numberToGenerate");
+            var seed = getValue("seed");
+            if (seed) {
+                seed = parseInt(seed);
+            } else {
+                seed = undefined;
+            }
+            console.log(localeKey, numberToGenerate, seed);
+            var results = townnamegen.TownNameGen.generate(localeKey, numberToGenerate, seed);
+            document.getElementById("output").value = results.join('\n');
+        }
+    </script>
+</body>
+</html>
