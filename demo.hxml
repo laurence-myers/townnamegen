@@ -1,0 +1,16 @@
+-cp src
+-neko bin/Build.n
+-lib polygonal-core
+-lib compiletime
+-lib tink_template
+-main townnamegen.demo.Build
+--macro include('townnamegen.locales')
+-cmd neko bin/Build.n
+
+--next
+-cp src
+-js bin/townnamegen.js
+-lib polygonal-core
+-lib compiletime
+townnamegen.demo.DemoForm
+--macro include('townnamegen.locales')

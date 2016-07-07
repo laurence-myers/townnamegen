@@ -1,14 +1,11 @@
 package townnamegen;
 import de.polygonal.core.math.random.Mersenne;
-import townnamegen.locales.AdditionalEnglish;
-import townnamegen.locales.Austrian;
 import townnamegen.locales.ILocale;
-import townnamegen.locales.OriginalEnglish;
 
 @:expose
 class TownNameGen {
 
-    static var LOCALE_MAP : Map<String, ILocale> = {
+    public static var LOCALE_MAP : Map<String, ILocale> = {
         var map = new Map<String, ILocale>();
         for (clz in CompileTime.getAllClasses(ILocale)) {
             var instance = Type.createInstance(clz, []);
@@ -53,10 +50,5 @@ class TownNameGen {
             }
         }
         return [for (k in names.keys()) k];
-    }
-    
-    public static function test() {
-        var result = generate(Type.getClassName(OriginalEnglish), 1);
-        trace(result);
     }
 }
