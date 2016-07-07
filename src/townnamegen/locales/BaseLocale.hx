@@ -72,4 +72,10 @@ class BaseLocale {
         var clzNameSplit = clzName.split('.');
         return clzNameSplit[clzNameSplit.length - 1];
     }
+    
+    public function getDisplayName() : String {
+        var key = getLocaleKey();
+        var splitOn = ~/([A-Z])/g;
+        return splitOn.replace(key, ' $1').substr(1);
+    }
 }
