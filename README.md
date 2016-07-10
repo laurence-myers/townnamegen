@@ -56,3 +56,7 @@ Then open bin/index.html in a web browser.
 Locales can be added dynamically at compile-time. Merely implement the ILocale interface, optionally extending the BaseLocale class, and recompile, making sure to include your locale's package in your HXML. For example:
 
 `--macro include('mypackge.locales')`
+
+## License
+
+TownNameGen is license under GPLv2, the same as OpenTTD.
