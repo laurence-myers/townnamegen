@@ -28,7 +28,7 @@ class TownNameGen {
             throw 'Locale not found: $locale';
         }
         if (seed == null) {
-            seed = Std.random(2147483647);
+            seed = Math.floor(Date.now().getTime());
         }
         var randomizer = new Mersenne(seed);
         var names : Map<String, Bool> = new Map<String, Bool>();
@@ -37,7 +37,7 @@ class TownNameGen {
             var name = locale.generateName(newSeed);
             var j = 1000;
             while (names.get(name) && j > 0) {
-                trace('Discarding $name');
+                //trace('Discarding $name');
                 newSeed = Math.floor(randomizer.random());
                 name = locale.generateName(newSeed);
                 j--;

@@ -1,0 +1,7 @@
+-cp src
+-neko bin/townnamegen.n
+-lib polygonal-core
+-lib compiletime
+-lib mcli
+-main townnamegen.cli.Main
+--macro include('townnamegen.locales')
