@@ -32,15 +32,15 @@ or
 
 ### Options
 
-- --help
+- `--help`
   - Shows the help text
-- --list-locales
+- `--list-locales`
   - Lists all the available options for the "locale" setting.
-- --locale <locale-key>
+- `--locale <locale-key>`
   - (Optional) The town name locale. Defaults to "AdditionalEnglish".
-- --num <in-num>
+- `--num <in-num>`
   - (Optional) The number of names to generate. Must be between 1 and 10,000. Defaults to 1.
-- --seed <seed>
+- `--seed <seed>`
   - (Optional) The seed for the random number generator. Defaults to the current timestamp.
 
 ## HTML/JS Demo
@@ -50,6 +50,17 @@ First, build the demo HTML and JS.
 `haxe demo.hxml`
 
 Then open bin/index.html in a web browser.
+
+## As a Library
+
+The name generator function is called like so:
+    
+```
+var locale = 'AdditionalEnglish';
+var num = 10;
+var seed = 1234567; // or null
+var results : Array<String> = townnamegen.TownNameGen.generate(locale, num, seed);
+```
 
 ## Adding Locales
 
