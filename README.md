@@ -57,6 +57,18 @@ Locales can be added dynamically at compile-time. Merely implement the ILocale i
 
 `--macro include('mypackge.locales')`
 
+## TODO
+
+- Port the remaining locales from OpenTTD
+  - Polish
+  - Czech
+  - Norwegian
+  - Hungarian
+  - Danish
+  - Turkish
+  - Italian
+  - Catalan
+
 ## License
 
 TownNameGen is license under GPLv2, the same as OpenTTD.
