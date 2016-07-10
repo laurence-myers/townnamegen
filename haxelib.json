@@ -1,0 +1,17 @@
+{
+  "name": "townnamegen",
+  "url" : "https://github.com/laurence-myers/townnamegen/",
+  "license": "GPL",
+  "tags": ["name", "generator"],
+  "description": "A town name generator, derived from OpenTTD, for JavaScript or command line.",
+  "version": "0.0.1",
+  "classPath": "src/",
+  "releasenote": "Core functionality is in place; some locales still need to be ported.",
+  "contributors": ["Laurence Dougal Myers"],
+  "dependencies": {
+    "polygonal-core": "1.0.4",
+    "compiletime": "2.5.1",
+    "tink_template": "0.3.0",
+    "mcli": "0.1.6"
+  }
+}
