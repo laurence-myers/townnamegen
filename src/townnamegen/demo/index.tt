@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8"/>
-	<title>townnamegen</title>
-	<meta name="description" content="" />
+	<title>TownNameGen</title>
+	<meta name="description" content="A town name generator, derived from OpenTTD." />
 	<style>
 	    h1 {
             font-family: sans-serif;
@@ -141,7 +141,7 @@
     <div class="main-window">
         <div class="header">
             <div class="header-inset">
-                <div class="header-title">TownNameGen demo</div>
+                <div class="header-title">(: metadata.name :) (: metadata.version :)</div>
             </div>
         </div>
         <div class="content">
@@ -175,7 +175,7 @@
     </div>
 
     <div class="footer">
-        <a href="https://github.com/laurence-myers/townnamegen">TownNameGen on GitHub</a>
+        <a href="(: metadata.url :)">TownNameGen home</a>
     </div>
     
     <script type="text/javascript">

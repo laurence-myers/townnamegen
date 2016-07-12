@@ -1,8 +1,17 @@
 package townnamegen.demo;
+import haxe.Json;
 import sys.io.File;
+
+typedef HaxelibMetadata = {
+    var name : String;
+    var version : String;
+    var url : String;
+    // others
+}
 
 class Build {
     public static function main() {
+        var metadata : HaxelibMetadata = Json.parse(File.getContent('haxelib.json'));
         var entries : Array<LocaleEntry> = [];
         for (locale in TownNameGen.LOCALE_MAP.iterator()) {
             entries.push({
@@ -22,7 +31,7 @@ class Build {
                 return 0;
             }
         });
-        var html = Views.index(entries);
+        var html = Views.index(entries, metadata);
         File.saveContent('bin/index.html', html); // dodgy, assumes running in project root
     }
 }
