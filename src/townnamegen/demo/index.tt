@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8"/>
-	<title>TownNameGen</title>
+	<title>(: metadata.name :) (: metadata.version :)</title>
 	<meta name="description" content="A town name generator, derived from OpenTTD." />
 	<style>
 	    h1 {
