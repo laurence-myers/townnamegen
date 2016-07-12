@@ -6,6 +6,10 @@ Derived from [OpenTTD's](https://www.openttd.org) town name generator.
 
 This can be used in a web page (via JavaScript), or from the command line (using Neko, but potentially other targets would work).
 
+## Demo
+
+[Click here to open the demo site.](https://laurence-myers.github.io/townnamegen)
+
 ## Differences to OpenTTD
 
 - Any name algorithms that just randomly picked from a list of real names were omitted.
