@@ -777,7 +777,7 @@ var townnamegen_demo_DemoForm = $hx_exports.townnamegen.demo.DemoForm = function
 };
 $hxClasses["townnamegen.demo.DemoForm"] = townnamegen_demo_DemoForm;
 townnamegen_demo_DemoForm.__name__ = ["townnamegen","demo","DemoForm"];
-townnamegen_demo_DemoForm.bind = function() {
+townnamegen_demo_DemoForm.main = function() {
 	window.document.getElementById(townnamegen_demo_DemoForm.FORM_NAME).onsubmit = function(event) {
 		event.preventDefault();
 		var form = new townnamegen_demo_DemoForm();
@@ -1182,4 +1182,5 @@ townnamegen_locales_Swedish._name_swedish_2a = ["B","Br","D","Dr","Dv","F","Fj",
 townnamegen_locales_Swedish._name_swedish_2b = ["a","e","i","o","u","y","å","ä","ö"];
 townnamegen_locales_Swedish._name_swedish_2c = ["ck","d","dd","g","gg","l","ld","m","n","nd","ng","nn","p","pp","r","rd","rk","rp","rr","rt","s","sk","st","t","tt","v"];
 townnamegen_locales_Swedish._name_swedish_3 = ["arp","berg","boda","borg","bro","bukten","by","byn","fors","hammar","hamn","holm","hus","hättan","kulle","köping","lund","löv","sala","skrona","slätt","spång","stad","sund","svall","svik","såker","udde","valla","viken","älv","ås"];
+townnamegen_demo_DemoForm.main();
 })(typeof console != "undefined" ? console : {log:function(){}}, typeof window != "undefined" ? window : exports);
