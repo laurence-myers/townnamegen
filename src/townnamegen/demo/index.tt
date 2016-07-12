@@ -65,6 +65,7 @@
         body {
             text-align: center;
             font-family: sans-serif;
+            background: #848583;
         }
 
         .main-window {
