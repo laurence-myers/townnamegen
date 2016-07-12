@@ -152,7 +152,7 @@
                     </div>
                     <div class="form-group">
                         <label for="numberToGenerate">Number of names to generate</label>
-                        <input id="numberToGenerate" type="number" min="1" max="10000" value="1" required/>
+                        <input id="numberToGenerate" type="number" min="1" max="10000" value="20" required/>
                     </div>
                     <div class="form-group">
                         <label for="seed">Seed (leave blank for random)</label>
