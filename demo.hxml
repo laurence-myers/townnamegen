@@ -12,5 +12,5 @@
 -js bin/townnamegen.js
 -lib polygonal-core
 -lib compiletime
-townnamegen.demo.DemoForm
+-main townnamegen.demo.DemoForm
 --macro include('townnamegen.locales')

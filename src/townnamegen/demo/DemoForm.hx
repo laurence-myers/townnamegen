@@ -45,8 +45,7 @@ class DemoForm {
         element.value = results.join('\n');
     }
     
-    public static function bind() : Void {
-        // TODO: macrofy this!
+    public static function main() : Void {
         js.Browser.document.getElementById(FORM_NAME).onsubmit = function (event : Event) {
             event.preventDefault();
             var form = new DemoForm();

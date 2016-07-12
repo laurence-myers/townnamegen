@@ -135,9 +135,6 @@
 	</style>
 </head>
 <body>
-	
-	<script src="townnamegen.js"></script>
-
     <div class="main-window">
         <div class="header">
             <div class="header-inset">
@@ -178,8 +175,6 @@
         <a href="(: metadata.url :)">TownNameGen home</a>
     </div>
     
-    <script type="text/javascript">
-        townnamegen.demo.DemoForm.bind();
-    </script>
+    <script src="townnamegen.js"></script>
 </body>
 </html>
